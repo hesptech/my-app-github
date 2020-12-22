@@ -1,1 +1,17 @@
-<p>users-codes works!</p>
+<div class="course">
+
+    <table class="lessons-table mat-elevation-z7" *ngIf="(userCodes$ | async) as lessons">
+        <thead>
+            <th>id</th>
+            <th>codice fisfale</th>
+            <th>tipo</th>
+        </thead>
+
+        <tr *ngFor="let lesson of lessons">
+            <td class="seqno-cell">{{lesson.id_codice}}</td>
+            <td class="description-cell">{{lesson.acc_cod}}</td>
+            <td class="duration-cell">{{lesson.tipo}}</td>
+        </tr>
+    </table>
+
+</div>
