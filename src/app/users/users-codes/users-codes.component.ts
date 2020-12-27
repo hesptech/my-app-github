@@ -17,6 +17,7 @@ export class UsersCodesComponent implements OnInit {
 
   ngOnInit(): void {
     this.userCodes$ = createHttpObservable(`http://applicazioni-web.net/colposcopy_2021/cf.php`);
+    console.log(this.userCodes$);
   }
 
 }

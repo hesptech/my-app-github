@@ -1,0 +1,19 @@
+<div class="course">
+
+    <table class="lessons-table mat-elevation-z7" *ngIf="(userData$ | async) as usersdata">
+        <thead>
+            <th>cognome</th>
+            <th>nome</th>
+            <th>username</th>
+            <th>e-mail</th>
+        </thead>
+
+        <tr *ngFor="let userdata of usersdata">
+            <td class="seqno-cell">{{userdata.cognome}}</td>
+            <td class="description-cell">{{userdata.nome}}</td>
+            <td class="duration-cell">{{userdata.username}}</td>
+            <td class="duration-cell">{{userdata.email}}</td>
+        </tr>
+    </table>
+
+</div>
