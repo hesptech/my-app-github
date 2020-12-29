@@ -1,9 +1,26 @@
+<p>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span><a routerLink="/" routerLinkActive="active"><span>Home</span></a></span>
+      <span><a routerLink="/users-codes" routerLinkActive="active">Users Codes</a></span>
+      <span><a routerLink="/users-data" routerLinkActive="active">Users Data</a></span>
+      <span><a routerLink="/test" routerLinkActive="active">Test</a></span>
+      <span><a routerLink="/tests" routerLinkActive="active">Tests</a></span>
+      <span class="spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</p>
 
+
+<div class="content" role="main">
+  <router-outlet></router-outlet>
+</div>
 
 
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
+<!-- <div class="toolbar" role="banner">
   <img
     width="40"
     alt="Angular Logo"
@@ -20,7 +37,7 @@
 <div class="content" role="main">
 
   <router-outlet></router-outlet>
-</div>
+</div> -->
 
 
 

@@ -55,14 +55,28 @@
   }
 
   a:hover {
-    color: #125699;
+    color: #8aa0b6;
   }
 
 
 
   .menu-top {
     padding: 0 10px;
-  }  
+  } 
+
+  // material toolbar
+
+  .mat-toolbar {
+    .spacer {
+      flex: 1 1 auto;
+    }
+  
+    span {
+      padding: 0 10px;
+    }
+  }
+
+
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {

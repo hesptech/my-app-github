@@ -1,3 +1,9 @@
+
+export interface UserCodes {
+    id_codice: number;
+    acc_cod: string;
+    tipo: number;
+}
 export interface UserData {
     id_user: number;
     codice: number;

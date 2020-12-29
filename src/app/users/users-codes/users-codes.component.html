@@ -1,4 +1,4 @@
-<div class="course">
+<!-- <div class="course">
 
     <table class="lessons-table mat-elevation-z7" *ngIf="(userCodes$ | async) as lessons">
         <thead>
@@ -14,4 +14,42 @@
         </tr>
     </table>
 
-</div>
+</div> -->
+
+
+
+<div class="example-header" fxLayout="row">
+
+    <mat-form-field>
+        <input matInput placeholder="Search lessons" #input (keyup)="searchLessons(input.value)">
+    </mat-form-field>
+  </div>
+
+  <div class="example-container mat-elevation-z8">
+    <mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="id_codice">
+        <mat-header-cell *matHeaderCellDef> id_codice </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label="id"> {{element.id_codice}} </mat-cell>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="acc_cod">
+        <mat-header-cell *matHeaderCellDef> acc_cod </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label="id"> {{element.acc_cod}} </mat-cell>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="tipo">
+        <mat-header-cell *matHeaderCellDef> tipo </mat-header-cell>
+        <mat-cell *matCellDef="let element" data-label="nome"> {{element.tipo}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  
+    <mat-paginator [pageSizeOptions]="[10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+

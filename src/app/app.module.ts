@@ -16,6 +16,9 @@ import { TestsComponent } from './tests/tests.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +40,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatToolbarModule,
+    MatIconModule,
     FlexLayoutModule
   ],
   providers: [],
