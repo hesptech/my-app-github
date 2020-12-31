@@ -1,11 +1,13 @@
+<!-- Toolbar -->
 <p>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span><a routerLink="/" routerLinkActive="active"><span>Home</span></a></span>
-      <span><a routerLink="/users-codes" routerLinkActive="active">Users Codes</a></span>
-      <span><a routerLink="/users-data" routerLinkActive="active">Users Data</a></span>
-      <span><a routerLink="/test" routerLinkActive="active">Test</a></span>
-      <span><a routerLink="/tests" routerLinkActive="active">Tests</a></span>
+      <a mat-button routerLink="/" >Home</a>
+      <a mat-button routerLink="/users-codes" routerLinkActive="active">Users Codes</a>
+      <a mat-button routerLink="/users-data" routerLinkActive="active">Users Data</a>
+      <a mat-button routerLink="/test" routerLinkActive="active">Test</a>
+      <!-- <a routerLink="/tests" routerLinkActive="active">Tests</a> -->
+      <a mat-button [routerLink]="'/tests'" routerLinkActive="active"> Tests </a>
       <span class="spacer"></span>
       <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
     </mat-toolbar-row>
