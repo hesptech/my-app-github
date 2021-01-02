@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductCreateComponent } from './crud/product-create/product-create.component';
+import { ProductDetailsComponent } from './crud/product-details/product-details.component';
+import { ProductListComponent } from './crud/product-list/product-list.component';
 import { TestComponent } from './test/test.component';
 import { TestsComponent } from './tests/tests.component';
 import { UsersCodesComponent } from './users/users-codes/users-codes.component';
@@ -10,6 +13,9 @@ const routes: Routes = [
   { path: 'users-data', component: UsersDataComponent },
   { path: 'test', component: TestComponent },
   { path: 'tests', component: TestsComponent },
+  { path: 'products', component: ProductListComponent },
+  { path: 'products/:id', component: ProductDetailsComponent },
+  { path: 'create', component: ProductCreateComponent }
 ];
 
 @NgModule({

@@ -6,7 +6,7 @@
     </button>
     <h1>SimpleCRM</h1>
       <span class="menu-spacer"></span>
-      <a mat-button routerLink="/" >Home</a>
+      <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
       <a mat-button routerLink="/users-codes" routerLinkActive="active">Users Codes</a>
       <a mat-button routerLink="/users-data" routerLinkActive="active">Users Data</a>
       <a mat-button routerLink="/test" routerLinkActive="active">Test</a>
@@ -24,8 +24,8 @@
       <a mat-list-item [routerLink]="'/users-data'"> users-data </a>
       <a mat-list-item [routerLink]="'/test'"> test </a>
       <a mat-list-item [routerLink]="'/tests'"> tests </a>
-      <a mat-list-item [routerLink]="'/activities'"> Activities </a>
-      <a mat-list-item [routerLink]="'/create-activity'"> Create Activity </a>
+      <a mat-list-item [routerLink]="'/products'"> products </a>
+      <a mat-list-item [routerLink]="'/create'"> create </a>
       <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
     </mat-nav-list>
   </mat-sidenav>

@@ -20,7 +20,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import { ProductCreateComponent } from './crud/product-create/product-create.component';
+import { ProductDetailsComponent } from './crud/product-details/product-details.component';
+import { ProductListComponent } from './crud/product-list/product-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,7 +34,10 @@ import {MatListModule} from '@angular/material/list';
     UsersCodesComponent,
     UsersDataComponent,
     TestComponent,
-    TestsComponent
+    TestsComponent,
+    ProductCreateComponent,
+    ProductDetailsComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,8 @@ import {MatListModule} from '@angular/material/list';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
