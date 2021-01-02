@@ -1,45 +1,37 @@
 <!-- Toolbar -->
-<p>
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>SimpleCRM</h1>
+      <span class="menu-spacer"></span>
       <a mat-button routerLink="/" >Home</a>
       <a mat-button routerLink="/users-codes" routerLinkActive="active">Users Codes</a>
       <a mat-button routerLink="/users-data" routerLinkActive="active">Users Data</a>
       <a mat-button routerLink="/test" routerLinkActive="active">Test</a>
-      <!-- <a routerLink="/tests" routerLinkActive="active">Tests</a> -->
       <a mat-button [routerLink]="'/tests'" routerLinkActive="active"> Tests </a>
       <span class="spacer"></span>
       <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</p>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-
-<div class="content" role="main">
-  <router-outlet></router-outlet>
-</div>
-
-
-
-<!-- Toolbar -->
-<!-- <div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Angular Logo"
-    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-  />
-  
-  <a routerLink="/" routerLinkActive="active"><span>Home</span></a>
-  <span><a routerLink="/users-codes" routerLinkActive="active">Users Codes</a></span>
-  <span><a routerLink="/users-data" routerLinkActive="active">Users Data</a></span>
-  <span><a routerLink="/test" routerLinkActive="active">Test</a></span>
-  <span><a routerLink="/tests" routerLinkActive="active">Tests</a></span>
-</div>
-
-<div class="content" role="main">
-
-  <router-outlet></router-outlet>
-</div> -->
-
-
-
+<!-- Sidenav -->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="'/users-codes'"> users-codes </a>
+      <a mat-list-item [routerLink]="'/users-data'"> users-data </a>
+      <a mat-list-item [routerLink]="'/test'"> test </a>
+      <a mat-list-item [routerLink]="'/tests'"> tests </a>
+      <a mat-list-item [routerLink]="'/activities'"> Activities </a>
+      <a mat-list-item [routerLink]="'/create-activity'"> Create Activity </a>
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
