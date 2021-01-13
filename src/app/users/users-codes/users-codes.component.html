@@ -31,7 +31,11 @@
       <!-- Position Column -->
       <ng-container matColumnDef="id_codice">
         <mat-header-cell *matHeaderCellDef> id_codice </mat-header-cell>
-        <mat-cell *matCellDef="let element" data-label="id"> {{element.id_codice}} </mat-cell>
+        <mat-cell *matCellDef="let element" data-label="id">
+          <button mat-button class="mat-raised-button mat-accent" (click)="editCourse(element)">
+            EDIT
+          </button>
+        </mat-cell>
       </ng-container>
   
       <!-- Name Column -->

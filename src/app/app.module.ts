@@ -21,10 +21,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ProductCreateComponent } from './crud/product-create/product-create.component';
 import { ProductDetailsComponent } from './crud/product-details/product-details.component';
 import { ProductListComponent } from './crud/product-list/product-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserCodeDialogComponent } from './users/user-code-dialog/user-code-dialog.component';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     TestsComponent,
     ProductCreateComponent,
     ProductDetailsComponent,
-    ProductListComponent
+    ProductListComponent,
+    UserCodeDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -55,10 +58,12 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     MatListModule,
     MatButtonModule,
+    MatDialogModule,
     FlexLayoutModule,
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [UserCodeDialogComponent]
 })
 export class AppModule { }
