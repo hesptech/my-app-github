@@ -22,11 +22,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 import { ProductCreateComponent } from './crud/product-create/product-create.component';
 import { ProductDetailsComponent } from './crud/product-details/product-details.component';
 import { ProductListComponent } from './crud/product-list/product-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserCodeDialogComponent } from './users/user-code-dialog/user-code-dialog.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -40,7 +43,9 @@ import { UserCodeDialogComponent } from './users/user-code-dialog/user-code-dial
     ProductCreateComponent,
     ProductDetailsComponent,
     ProductListComponent,
-    UserCodeDialogComponent
+    UserCodeDialogComponent,
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +64,7 @@ import { UserCodeDialogComponent } from './users/user-code-dialog/user-code-dial
     MatListModule,
     MatButtonModule,
     MatDialogModule,
+    MatCardModule,
     FlexLayoutModule,
     HttpClientModule
   ],

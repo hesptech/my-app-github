@@ -1,5 +1,5 @@
 import {Observable, Observer} from 'rxjs';
-import { UserCodes } from '../model/user-codes';
+// import { UserCodes } from '../model/user-codes';
 
 export function createHttpObservable(url: string): any {
 // export function createHttpObservable(url: string): Observable<UserCodes[]> {
